@@ -5,7 +5,7 @@
  *      Author: Ahmed
  */
  
- 
+#include "DoorSensor.h"
  Error_Status DoorSensor_Init(void)
  {
 	Error_Status Local_Error;

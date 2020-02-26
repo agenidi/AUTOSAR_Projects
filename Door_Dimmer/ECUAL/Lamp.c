@@ -4,7 +4,7 @@
  *  Created on: Feb 26, 2020
  *      Author: Ahmed
  */
-
+#include "Lamp.h"
 Error_Status Lamp_Init(void)
 {
 	Error_Status Local_Error=GPIO_Init(LAMP_PORT,LAMP_PIN,LAMP_PIN_MODE);
