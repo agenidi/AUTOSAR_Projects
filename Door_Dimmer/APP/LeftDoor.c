@@ -14,14 +14,14 @@
 
 Error_Status LeftDoor_init(void)
 {
-	Error_Status Error = E_Ok;
+	 u8 Local_Error= OK;
 	Error = DoorSensor_Init();
 	return Error;
 }
 
 Error_Status LeftDoor_GetStatus(u8 *DoorStatus)
 {
-	Error_Status error = E_ok;
+	 u8 Local_Error= OK;
 	
 	u8 State=0;
 	
