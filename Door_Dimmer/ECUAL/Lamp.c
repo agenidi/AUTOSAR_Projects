@@ -12,12 +12,15 @@ ErrorStd Lamp_Init(void)
 	return Local_Error;
 }
 
-ErrorStd Lamp_Update(u8 Lamp_Ch,u8 State)
+ErrorStd Lamp_Update(uint8_t Lamp_Ch,uint8_t State)
 {
 	u8 Local_Error;
 	if(Lamp_Ch==LAMP1)
 	{
-		GPIO_Write(LAMP_PORT,LAMP_PIN,State);
+		if(State==ON)
+			GPIO_Write(LAMP_PORT,LAMP_PIN,HIGH);
+		else if(State==OFF)
+			GPIO_Write(LAMP_PORT,LAMP_PIN,LOW);
 		Local_Error=OK;
 	}
 	else{
@@ -25,6 +28,7 @@ ErrorStd Lamp_Update(u8 Lamp_Ch,u8 State)
 	}
 	return Local_Error;
 }
+
 
 
 
