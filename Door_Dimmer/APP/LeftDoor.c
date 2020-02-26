@@ -15,8 +15,8 @@
 Error_Status LeftDoor_init(void)
 {
 	 u8 Local_Error= OK;
-	Error = DoorSensor_Init();
-	return Error;
+	Local_Error = DoorSensor_Init();
+	return Local_Error;
 }
 
 Error_Status LeftDoor_GetStatus(u8 *DoorStatus)
@@ -25,9 +25,9 @@ Error_Status LeftDoor_GetStatus(u8 *DoorStatus)
 	
 	u8 State=0;
 	
-	Error = DoorSensor_ReadStatus(LEFTSENSOR, &State);
+	Local_Error = DoorSensor_ReadStatus(LEFTSENSOR, &State);
 	*Doorstatus = State;
-	return Error;
+	return Local_Error;
 	
 }
 

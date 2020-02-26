@@ -12,22 +12,23 @@
 
 Error_Status Lighting_init(void)
 {
-	Error_Status Error = E_Ok;
-	Error = Lamp_Init();
-	return Error;
+	u8 Local_Error= OK;
+	Local_Error = Lamp_Init();
+	
+	return Local_Error;
 }
 
 Error_Status Lighting_Control(void)
 {
-	Error_Status Error = E_Ok;
+	u8 Local_Error= OK;
 	u8 LampState = 0;
 	
 	if(LampState == LIGHT_ON || LampState == LIGHT_OFF)
-		Error = Lamp_Update(Lamp_ch, LampState);
+		Local_Error = Lamp_Update(Lamp_ch, LampState);
 	else
-		Error = E_Nok
+		Local_Error=NOK:
 	
-	return Error
+	return Local_Error
 	
 }
 
