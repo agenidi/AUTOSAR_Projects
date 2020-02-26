@@ -15,6 +15,6 @@
 
 Error_Status RightDoor_init(void);
 
-Error_Status RighttDoor_GetStatus(u8 *DoorStatus);
+Error_Status RighttDoor_GetStatus(uint8_t *DoorStatus);
 
 #endif /* APP_RIGHTDOOR_H_ */

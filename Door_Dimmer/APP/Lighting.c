@@ -8,27 +8,31 @@
 #ifndef APP_LIGHTING_C_
 #define APP_LIGHTING_C_
 
+#include "LIB/Std_lib.h"
+
+#include "ECUAL/Lamp.h"
 #include "Lighting.h"
+
 
 Error_Status Lighting_init(void)
 {
-	u8 Local_Error= OK;
+	Error_Status Local_Error= OK;
 	Local_Error = Lamp_Init();
 	
 	return Local_Error;
 }
 
-Error_Status Lighting_Control(void)
+Error_Status Lighting_Control(uint8_t LampState)
 {
-	u8 Local_Error= OK;
-	u8 LampState = 0;
+	Error_Status Local_Error= OK;
 	
+
 	if(LampState == LIGHT_ON || LampState == LIGHT_OFF)
 		Local_Error = Lamp_Update(Lamp_ch, LampState);
 	else
 		Local_Error=NOK;
 	
-	return Local_Error
+	return Local_Error;
 	
 }
 

@@ -12,7 +12,7 @@
 
 
 Error_Status LeftDoor_init(void);
-Error_Status LeftDoor_GetStatus(u8 *DoorStatus);
+Error_Status LeftDoor_GetStatus(uint8_t *DoorStatus);
 
 
 #endif /* APP_LEFTDOOR_H_ */

@@ -8,11 +8,11 @@
 #ifndef MCAL_RRC_H_
 #define MCAL_RRC_H_
 
-#define GPIOA       0x80000001
-#define GPIOB       0x80000002
-#define GPIOC       0x80000004
-#define GPIOD       0x80000008
-#define GPIOE       0x80000010
+#define PORTA       0x80000001
+#define PORTB       0x80000002
+#define PORTC       0x80000004
+#define PORTD       0x80000008
+#define PORTE       0x80000010
 #define GPIOF       0x80000020
 #define UDMA        0x80002000
 #define USB0        0x80010000
