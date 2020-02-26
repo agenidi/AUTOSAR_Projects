@@ -26,7 +26,7 @@ Error_Status Lighting_Control(void)
 	if(LampState == LIGHT_ON || LampState == LIGHT_OFF)
 		Local_Error = Lamp_Update(Lamp_ch, LampState);
 	else
-		Local_Error=NOK:
+		Local_Error=NOK;
 	
 	return Local_Error
 	

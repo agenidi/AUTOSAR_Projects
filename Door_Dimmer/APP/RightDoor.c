@@ -14,21 +14,21 @@
 
 Error_Status RightDoor_init(void)
 {
-	Error_Status Error = E_Ok;
-	Error = DoorSensor_Init();
-	return Error;
+	u8 Local_Error= OK;
+	Local_Error = DoorSensor_Init();
+	return Local_Error;
 }
 
 Error_Status RighttDoor_GetStatus(u8 *DoorStatus)
 {
-	Error_Status error = E_ok;
+	u8 Local_Error= OK;
 	
 	u8 State=0;
 	
-	Error = DoorSensor_ReadStatus(RIGHTSENSOR, &State);
+	Local_Error = DoorSensor_ReadStatus(RIGHTSENSOR, &State);
 	*Doorstatus = State;
 	
-	return Error;
+	return Local_Error;
 	
 }
 
