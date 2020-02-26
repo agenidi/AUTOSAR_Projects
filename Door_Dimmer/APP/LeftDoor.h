@@ -8,8 +8,11 @@
 #ifndef APP_LEFTDOOR_H_
 #define APP_LEFTDOOR_H_
 
+#define LEFTSENSOR 	1
 
 
+Error_Status LeftDoor_init(void);
+Error_Status LeftDoor_GetStatus(u8 *DoorStatus);
 
 
 #endif /* APP_LEFTDOOR_H_ */
