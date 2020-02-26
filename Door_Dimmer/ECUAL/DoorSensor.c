@@ -9,7 +9,7 @@
  Error_Status DoorSensor_Init(void)
  {
 	Error_Status Local_Error;
-	uint8_t Sensor1_State,Sensor2_State ;
+	Error_Status Sensor1_State,Sensor2_State ;
 	Sensor1_State=GPIO_Init(DOORSENSOR1_PORT,DOORSENSOR1_PIN,DOORSENSOR1_PIN_MODE);
 	Sensor2_State=GPIO_Init(DOORSENSOR2_PORT,DOORSENSOR2_PIN,DOORSENSOR2_PIN_MODE);
 	if(Sensor1_State==OK && Sensor2_State==OK)

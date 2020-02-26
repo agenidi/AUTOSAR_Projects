@@ -5,16 +5,16 @@
  *      Author: Ahmed
  */
 
-ErrorStd Lamp_Init(void)
+Error_Status Lamp_Init(void)
 {
-	u8 Local_Error=GPIO_Init(LAMP_PORT,LAMP_PIN,LAMP_PIN_MODE);
+	Error_Status Local_Error=GPIO_Init(LAMP_PORT,LAMP_PIN,LAMP_PIN_MODE);
 	
 	return Local_Error;
 }
 
-ErrorStd Lamp_Update(uint8_t Lamp_Ch,uint8_t State)
+Error_Status Lamp_Update(uint8_t Lamp_Ch,uint8_t State)
 {
-	u8 Local_Error;
+	Error_Status Local_Error;
 	if(Lamp_Ch==LAMP1)
 	{
 		if(State==ON)
