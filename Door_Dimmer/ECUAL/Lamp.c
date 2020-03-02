@@ -1,13 +1,25 @@
-/*
- * Lamp.c
+/************************************************************************
+ * File name: Lamp.c
  *
- *  Created on: Feb 26, 2020
- *      Author: Ahmed
- */
+ *
+ * Description: This file contains the implementation of Lamp driver Functions
+ * used by the user
+ *
+ * owner: Hammam Mazen
+ * date: 27/2/2020
+ * version 1.1
+ *
+ ***************************************************************************/
+ 
+ /********************************INCLUDES**********************************/
+ 
 #include "LIB/Std_lib.h"
 #include "MCAL/GPIO.h"
 #include "MCAL/RRC.h"
 #include "Lamp.h"
+
+/***************************************************************************/
+
 Error_Status Lamp_Init(void)
 {
     Error_Status Local_Error;
