@@ -1,30 +1,26 @@
-/*
- * RRC.c
+/************************************************************************
+ * File name: RCC.c
  *
- *  Created on: Feb 26, 2020
- *      Author: Ahmed
- */
+ *
+ * Description: This file contains the implementation of the RCC driver
+ *
+ * owner: Ahmed GENEDI , Mohamed Anwar
+ * date: 2/3/2020
+ * version 1.2
+ *
+ ***************************************************************************/
 #include "LIB/Std_lib.h"
 #include "RRC.h"
-
+/* RCC registers */
 #define SYS_CTRL_BASE_ADDRESS   0x400FE000
 #define RCGC2                   *((volatile uint32_t * const)(SYS_CTRL_BASE_ADDRESS+0x108))
 #define RCGC1                   *((volatile uint32_t * const)(SYS_CTRL_BASE_ADDRESS+0x104))
 
+/*mask to determine which register (RCCG1 , RCCG2) to set to enable the wanted preipheral*/
 #define RCGC1_MASK    0x40000000
 #define RCGC2_MASK    0x80000000
 
-/*This function is used to enbale the clock of a certain prephiral
- * input options of preph_t are:
- *  GPIOA
-    GPIOB
-    GPIOC
-    GPIOD
-    GPIOE
-    GPIOF
-    UDMA
-    USB0
- */
+
 Error_Status RRC_EnablePreph(preph_t Preph)
 {
     Error_Status stat = OK;
